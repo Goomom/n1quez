@@ -60,7 +60,8 @@ body.light {
 
 /* logos */
 .logo {
-  width: 100px;
+    width: 60px;
+    max-width: 100%;
 }
 
 .logo-dark {
@@ -99,7 +100,8 @@ body.light .logo-light {
 
 .btn {
   display: block;
-  width: 260px;
+  width: 100%;
+  max-width: 260px;
   margin: 12px auto;
   padding: 16px;
   border-radius: 18px;
@@ -295,7 +297,7 @@ body.light .particles {
 }
 
 .card {
-  width: 90%;
+  width: min(90vw, 380px);
   max-width: 380px;
 
   /* altura longa mas sem grudar nas bordas */
@@ -396,4 +398,26 @@ body {
 /* opcional: diminui espaços exagerados */
 .container {
   padding: 10px 20px;
+}
+
+.credit-link {
+  color: inherit;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all .3s ease;
+}
+
+.credit-link:hover {
+  color: #fff;
+  text-shadow:
+    0 0 6px rgba(255,255,255,.7),
+    0 0 12px rgba(255,255,255,.6),
+    0 0 24px rgba(255,255,255,.5);
+}
+
+body.light .credit-link:hover {
+  color: #111;
+  text-shadow:
+    0 0 6px rgba(0,0,0,.35),
+    0 0 12px rgba(0,0,0,.25);
 }

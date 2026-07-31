@@ -1,9 +1,12 @@
-let currentLang = "pt";
+let currentLang = "en";
 
 function toggleLang() {
   currentLang = currentLang === "pt" ? "en" : "pt";
 
-  document.querySelectorAll("[data-pt]").forEach(el => {
+  const elements = document.querySelectorAll("[data-pt]");
+  console.log("Elementos encontrados:", elements.length);
+
+  elements.forEach(el => {
     el.textContent = el.dataset[currentLang];
   });
 }
